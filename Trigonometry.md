@@ -2,6 +2,6 @@
 
 [Return to Table of Contents](README.md)
 
-## Degrees and Radians
+## Angles, Degrees, and Radians
 
 - SohCahToa
