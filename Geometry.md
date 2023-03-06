@@ -81,7 +81,7 @@ Cross products and dot products are implemented as Blueprint nodes.
                         [ 1*a +  1*b ]
                         [ 1*a + -1*b ]
 
-## Linear Transformations in Unreal Engine
+## Linear Transformation in Unreal Engine
 
 Blueprint: Transform Vector node
 
