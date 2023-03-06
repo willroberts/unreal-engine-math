@@ -4,14 +4,14 @@ These notes serve as a refresher on linear algebra and 2D/3D math for game devel
 
 ## Table of Contents
 
-- Linear Algebra
+- [Linear Algebra](LinearAlgebra.md)
     - Systems of Linear Equations
     - Matrices
-- Geometry
-    - Vectors and Triangles
+- [Geometry](Geometry.md)
+    - Triangles and Vectors
     - Linear Transformation of Vectors
     - Linear Interpolation
-- Trigonometry
+- [Trigonometry](Trigonometry.md)
     - Angles and Radians
-- Physics
+- [Physics](Physics.md)
     - Kinematic Equations
