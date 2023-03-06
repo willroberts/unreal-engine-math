@@ -2,6 +2,8 @@
 
 [Return to Table of Contents](README.md)
 
+## Triangles and Vectors
+
 - 2D and 3D Vectors
     - Vectors have magnitude (length) and direction (angle)
     - Unit vectors (magnitude/length of 1) and unit circles (radius of 1)
@@ -44,7 +46,16 @@
         - Left and right are Vector A, top and bottom are Vector B
         - A ⨯ B = Area
 
+## Vectors in Unreal Engine
+
+[FVector](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/): A vector in 3D space with float components X, Y, and Z.
+
+Cross products and dot products are implemented as Blueprint nodes.
+
+## Linear Transformation of Vectors
+
 - Linear transformations in Vector spaces
+    - Sometimes called linear maps or mappings
     - Useful for expanding, compacting, reflecting, rotating, or shifting coordinate systems
     - Linear transformation: L(V) = b, similar to function transformation f(x) = a
     - Linear transformations can change dimensions of Vectors, e.g. 2x2 Matrix to Vec<3> or Vec<2> to Scalar
@@ -70,4 +81,10 @@
                         [ 1*a +  1*b ]
                         [ 1*a + -1*b ]
 
-- Linear Interpolation (Lerp/RinterpTo)
+## Linear Transformations in Unreal Engine
+
+Blueprint: Transform Vector node
+
+## Linear Interpolation
+
+AKA Lerp, RinterpTo
