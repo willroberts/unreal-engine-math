@@ -138,6 +138,6 @@ Notice that the third term here is added instead of subtracted. The operators wi
 
 Given two `FMatrix&` objects `A` and `B` in Unreal C++, you can simply use `A + B`, `A * B`, etc. to perform Matrix math. `FMatrix` also has a `Determinant()` function, which returns a `float` Scalar value.
 
-If you only wish to perform Vector rotation rather than scaling or translation, there is a simpler subclass of `FMatrix` called [`FRotationMatrix`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FRotationMatrix/), which constructs an `FMatrix` from an [FRotator](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FRotator/) with Pitch, Roll, and Yaw values.
+If you only wish to perform Vector rotation rather than scaling or translation, there is a simpler subclass of `FMatrix` called [`FRotationMatrix`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FRotationMatrix/), which constructs an `FMatrix` from an [`FRotator`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FRotator/) of Pitch, Roll, and Yaw values.
 
 Matrix math operations, such as addition, multiplication, transforms, and determinants, are also available as Blueprint nodes implemented in C++.
