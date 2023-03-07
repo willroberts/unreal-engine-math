@@ -24,3 +24,4 @@ Since the latest version of Unreal Engine's API documentation is missing content
     - Linear Interpolation in Unreal Engine
 - [Physics](Physics.md)
     - Kinematic Equations
+    - Kinematics in Unreal Engine
