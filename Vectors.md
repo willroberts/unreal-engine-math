@@ -106,6 +106,8 @@ Given a `FVector&` reference in Unreal C++, cross and dot products can be obtain
 
 There are also [`FVector4`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector4/) (W, X, Y, and Z) and [`FVector2D`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector2D/) (X and Y) classes available.
 
+To normalize Vectors before calculating their Dot Product, use [GetSafeNormal](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/GetSafeNormal/) and [Normalize](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/Normalize/).
+
 ## Linear Transformation of Vectors
 
 Linear transformations in Vector spaces, sometimes called linear maps since they map one Vector space to another Vector space, are useful for expanding, compacting, reflecting, rotating, or shifting coordinate systems.
