@@ -53,7 +53,7 @@ Note: `:` characters serve as the dotted line here. Further examples will omit t
 
 ## Solving Matrices with Gauss-Jordan Elimination
 
-This method of solving Matrices involves simplifying equations by dividing terms, or creating new matrix rows by addition. The goal is to reduce at least one column's value to `0`, and ideally to have `1` values in other columns.
+This method of solving Matrices involves simplifying equations by dividing terms, or creating new matrix rows by addition. The goal is to reduce at least one column's value to `0`, and ideally to have `1` values in other columns. This process is called "row reduction", with the target form being "reduced row echelon form".
 
 As an example, consider the following System of Linear Equations:
 
