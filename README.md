@@ -2,6 +2,8 @@
 
 These notes serve as a refresher on linear algebra and 2D/3D math for game development, especially with Unreal Engine.
 
+Since the latest version of Unreal Engine's API documentation is missing content, documentation links use version `4.27`.
+
 ## Table of Contents
 
 - [Linear Algebra & Matrices](LinearAlgebra.md)
