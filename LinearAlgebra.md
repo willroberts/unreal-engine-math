@@ -85,8 +85,6 @@ We can then add or subtract any two equations in the System to create a new equa
 
 The second equation now represents `7x + 0y = 7`, which can be reduced to `x = 1`. The System can now be solved by reducing `2(1) + 3y = -1` to `y = -1`.
 
-An example C++ implementation of Gauss-Jordan Elimination on a 3x3 Matrix can be seen [here](Source/GaussJordanElimination/GaussJordanElimination.cpp).
-
 ## Matrix Multiplication
 
 Matrix multiplication is useful in linear transformations of vectors, for rotation or other purposes.
