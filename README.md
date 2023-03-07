@@ -4,14 +4,14 @@ These notes serve as a refresher on linear algebra and 2D/3D math for game devel
 
 ## Table of Contents
 
-- [Linear Algebra](LinearAlgebra.md)
+- [Linear Algebra & Matrices](LinearAlgebra.md)
     - Systems of Linear Equations
     - Matrices
     - Solving Matrices with Gauss-Jordan Elimination
     - Matrix Multiplication
     - Determinants of Square Matrices
     - Matrices in Unreal Engine
-- [Geometry](Geometry.md)
+- [Vectors](Vectors.md)
     - Vectors
     - Vector Dot Products
     - Vector Cross Products
