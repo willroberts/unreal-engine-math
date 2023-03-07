@@ -5,3 +5,4 @@
 ## Angles, Degrees, and Radians
 
 - SohCahToa
+- Applying periodic functions like `sin()` and `cos()` to unit Vectors results in a "unit circle" with a radius of 1.
