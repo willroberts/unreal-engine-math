@@ -114,7 +114,7 @@ Linear transformations in Vector spaces, sometimes called linear maps since they
 
 Like function transformations, e.g. `f(x) = y`, linear transformations can operate on Vectors, e.g. `L(V) = W`. Linear transformations can change the dimensions of Vectors, such as turning a 2x2 Matrix into a 3-component Vector, or turning a 2-component Vector into a Scalar.
 
-Linear transformations can be represented as `L(V) = A*V`, where `A` is an `m*n` Matrix. As an example, we can transform 2-component Vectors into 3-component Vectors, where `a` and `b` are the input Vector's components:
+Linear transformations can be represented as `L(V) = A*V`, where `A` is an `m*n` [Transformation Matrix](https://en.wikipedia.org/wiki/Transformation_matrix). As an example, we can transform 2-component Vectors into 3-component Vectors, where `a` and `b` are the input Vector's components:
 
 ```text
 L(V) = [     b ]
