@@ -106,7 +106,7 @@ Given a `FVector&` reference in Unreal C++, cross and dot products can be obtain
 
 There are also [`FVector4`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector4/) (W, X, Y, and Z) and [`FVector2D`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector2D/) (X and Y) classes available.
 
-To normalize Vectors before calculating their Dot Product, use [GetSafeNormal](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/GetSafeNormal/) and [Normalize](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/Normalize/).
+To normalize Vectors before calculating their Dot Product, use [`GetSafeNormal`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/GetSafeNormal/) and [`Normalize`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/Normalize/).
 
 ## Linear Transformation of Vectors
 
@@ -136,9 +136,9 @@ L(V2) = [  1 ]
 
 [`FTransform`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FTransform/): A transform composed of scale, rotation (as a quaternion), and translation.
 
-To set an Actor's transform, use [SetActorTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorTransform/), or [SetActorRelativeTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorRelativeTransform/) to target the Actor's Root Component.
+To set an Actor's transform, use [`SetActorTransform`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorTransform/), or [`SetActorRelativeTransform`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorRelativeTransform/) to target the Actor's Root Component.
 
-To apply a delta to the Actor's existing transform, use [AddActorLocalTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorLocalTransform/) to transform according to local space (based on the Actor's orientation), or [AddActorWorldTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorWorldTransform/) to transform according to world space (based on the world's orientation).
+To apply a delta to the Actor's existing transform, use [`AddActorLocalTransform`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorLocalTransform/) to transform according to local space (based on the Actor's orientation), or [`AddActorWorldTransform`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorWorldTransform/) to transform according to world space (based on the world's orientation).
 
 When transforming an Actor, you can enable `Sweep` (to respect collisions during translation) or `Teleport` (to pause the physics simulation while transforming the Actor).
 
