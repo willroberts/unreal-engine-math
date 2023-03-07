@@ -6,9 +6,9 @@
 
 A Vector is a physical property which has both magnitude (length) and direction (angle). A "Unit Vector" is a Vector with a magnitude/length of 1. 
 
-Vectors are useful for modeling positions on a coordinate plane, force in 3D spaces, and more. Vectors are commonly used in game development, since basic Vector math is generally less computationally expensive than Trigonometric functions like `sin()` and `cos()`.
+Vectors are useful for modeling positions on a coordinate plane, force in 3D spaces, and more. Vectors are commonly used in game development, since basic Vector math is less computationally expensive than Trigonometric functions like `cos()` or `acos()`.
 
-When used on a coordinate plane, Vectors inherently form right triangles from the origin. This can be combined with the Pythagorean Theorem to determine the distance between two points.
+When used on a coordinate plane, Vectors inherently form right triangles from the origin. This can be combined with the Pythagorean Theorem to determine the distance between two points, for example.
 
 ## Basic Vector Operations
 
@@ -32,11 +32,11 @@ V1 * V2 = < 10 10 >
 
 ## Vector Dot Products
 
-The Vector Dot Product (i.e. `V1 ⋅ V2`) is used to calculate angles without trigonometry.
+The Vector Dot Product (i.e. `V1 ⋅ V2`) can be used to approximate angles without trigonometry.
 
 The Dot Product of orthogonal Vectors is always `0`, since 90 degrees is `π/2` Radians, and `cos(π/2) = 0`.
 
-Multiplying two Vectors with the Dot Product produces a Scalar value:
+The Dot Product of two Vectors produces a Scalar value:
 
 ```text
 V1 = < 1 2 3 >
@@ -45,22 +45,24 @@ V2 = < 4 5 6 >
 V1 ⋅ V2 = 1*4 + 2*5 + 3*6 = 32
 ```
 
-Alternatively, the Dot Product can be expressed as a function of length and angles:
+If the inpute Vectors are normalized (e.g. on a scale from -1 to 1), this value can be used to appromixate angle.
+
+Using trigonometry, the Dot Product can be expressed as a function of length and angles:
 
 ```text
-V1 ⋅ V2 = len(V1) * len(V2) * cos(Theta)
+V1 ⋅ V2 = len(V1) * len(V2) * cos(θ)
 ```
 
 Or (rearranged to prioritize the angle):
 
 ```text
-V1 ⋅ V2 / (len(V1) * len(V2)) = cos(Theta)
+V1 ⋅ V2 / (len(V1) * len(V2)) = cos(θ)
 ```
 
 The formula is simpler when dealing with Unit Vectors, since the length of each Vector is 1:
 
 ```text
-V1 ⋅ V2 = cos(Theta)
+V1 ⋅ V2 = cos(θ)
 ```
 
 This can be inverted with the `acos()` function to yield the angle in Radians.
@@ -138,22 +140,16 @@ https://docs.unrealengine.com/5.1/en-US/transforming-actors-in-unreal-engine/
 
 To set an Actor's transform, use [SetActorTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorTransform/), or [SetActorRelativeTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorRelativeTransform/) to target the Actor's Root Component.
 
-To apply a delta to the Actor's existing transform, use []() to transform according to local space (based on the Actor's orientation), or []() to transform according to world space (based on the world's orientation).
+To apply a delta to the Actor's existing transform, use [AddActorLocalTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorLocalTransform/) to transform according to local space (based on the Actor's orientation), or [AddActorWorldTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorWorldTransform/) to transform according to world space (based on the world's orientation).
 
-
-https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorLocalTransform/
-https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorWorldTransform/
-
-Sweep (Collision) and Teleport (Physics)
-
-Blueprint: Transform Vector node
+When transforming an Actor, you can enable `Sweep` (to respect collisions during translation) or `Teleport` (to pause the physics simulation while transforming the Actor).
 
 For additional info, see [Transforming Actors in Unreal Engine](https://docs.unrealengine.com/5.1/en-US/transforming-actors-in-unreal-engine/).
 
 ## Linear Interpolation
 
-AKA Lerp
+- Lerp
 
 ## Linear Interpolation in Unreal Engine
 
-RinterpTo
+- RinterpTo
