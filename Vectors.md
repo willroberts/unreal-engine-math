@@ -100,13 +100,13 @@ The result forms a new Vector, which is the Cross Product:
 
 ## Vectors in Unreal Engine
 
-[`FVector`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/): A vector in 3D space with float components X, Y, and Z.
+[`FVector`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector/): A vector in 3D space with float components X, Y, and Z.
 
-Given a `FVector&` reference in Unreal C++, cross and dot products can be obtained from the [`CrossProduct`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/CrossProduct/) and [`DotProduct`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/DotProduct/) static functions, respectively. Blueprint nodes also exist for these operations. As with Matrices, basic math operations can be used on `FVector` instances in C++, e.g. `V1 + V2`.
+Given a `FVector&` reference in Unreal C++, cross and dot products can be obtained from the [`CrossProduct`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector/CrossProduct/) and [`DotProduct`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector/DotProduct/) static functions, respectively. Blueprint nodes also exist for these operations. As with Matrices, basic math operations can be used on `FVector` instances in C++, e.g. `V1 + V2`.
 
-There are also [`FVector4`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector4/) (W, X, Y, and Z) and [`FVector2D`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector2D/) (X and Y) classes available.
+There are also [`FVector4`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector4/) (W, X, Y, and Z) and [`FVector2D`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector2D/) (X and Y) classes available.
 
-To normalize Vectors before calculating their Dot Product, use [`GetSafeNormal`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/GetSafeNormal/) and [`Normalize`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/Normalize/).
+To normalize Vectors before calculating their Dot Product, use [`GetSafeNormal`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector/GetSafeNormal/) and [`Normalize`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector/Normalize/).
 
 ## Linear Transformation of Vectors
 
@@ -134,7 +134,7 @@ L(V2) = [  1 ]
 
 ## Linear Transformation in Unreal Engine
 
-[`FTransform`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FTransform/): A transform composed of scale, rotation (as a quaternion), and translation.
+[`FTransform`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FTransform/): A transform composed of scale, rotation (as a quaternion), and translation.
 
 To set an Actor's transform, use [`SetActorTransform`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorTransform/), or [`SetActorRelativeTransform`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorRelativeTransform/) to target the Actor's Root Component.
 
@@ -154,15 +154,15 @@ Linear interpolation has a variety of uses in game development, from smooth move
 
 ## Linear Interpolation in Unreal Engine
 
-Unreal Engine's linear interpolation functions can be found in the [`FMath`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/) library.
+Unreal Engine's linear interpolation functions can be found in the [`FMath`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/) library.
 
 There are a number of functions available based on the classes you are working with:  
   
-- For `float` values, you can use [`FInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/FInterpTo/) or [`FInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/FInterpConstantTo/) (constant step).
-- For [`FRotator`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FRotator/) values, you can use [`RInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/RInterpTo/) or [`RInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/RInterpConstantTo/) (constant step).
-- For [`FVector`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/) values, you can use [`VInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/VInterpTo/) or [`VInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/VInterpConstantTo/) (constant step).
-- For [`FVector2D`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector2D/) values, you can use [`Vector2DInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/Vector2DInterpTo/) or [`Vector2DInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/Vector2DInterpConstantTo/) (constant step).
-- For [`FQuat`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FQuat/) values, you can use [`QInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/QInterpTo/) or [`QInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/QInterpConstantTo/) (constant step).
-- You can also use the template function [`InterpStep`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/InterpStep/) with type `T` to interpolate values while specifying the number of steps to use in the step function.
+- For `float` values, you can use [`FInterpTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/FInterpTo/) or [`FInterpConstantTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/FInterpConstantTo/) (constant step).
+- For [`FRotator`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FRotator/) values, you can use [`RInterpTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/RInterpTo/) or [`RInterpConstantTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/RInterpConstantTo/) (constant step).
+- For [`FVector`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector/) values, you can use [`VInterpTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/VInterpTo/) or [`VInterpConstantTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/VInterpConstantTo/) (constant step).
+- For [`FVector2D`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FVector2D/) values, you can use [`Vector2DInterpTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/Vector2DInterpTo/) or [`Vector2DInterpConstantTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/Vector2DInterpConstantTo/) (constant step).
+- For [`FQuat`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FQuat/) values, you can use [`QInterpTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/QInterpTo/) or [`QInterpConstantTo`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/QInterpConstantTo/) (constant step).
+- You can also use the template function [`InterpStep`](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Core/Math/FMath/InterpStep/) with type `T` to interpolate values while specifying the number of steps to use in the step function.
 
 As usual, there are also Blueprint nodes for all of the above.
