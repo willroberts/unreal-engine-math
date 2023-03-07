@@ -12,11 +12,14 @@ These notes serve as a refresher on linear algebra and 2D/3D math for game devel
     - Determinants of Square Matrices
     - Matrices in Unreal Engine
 - [Geometry](Geometry.md)
-    - Triangles and Vectors
+    - Vectors
+    - Vector Dot Products
+    - Vector Cross Products
     - Vectors in Unreal Engine
     - Linear Transformation of Vectors
     - Linear Transformation in Unreal Engine
     - Linear Interpolation
+    - Linear Interpolation in Unreal Engine
 - [Trigonometry](Trigonometry.md)
     - Angles, Degrees, and Radians
 - [Physics](Physics.md)
