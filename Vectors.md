@@ -136,10 +136,6 @@ L(V2) = [  1 ]
 
 [`FTransform`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FTransform/): A transform composed of scale, rotation (as a quaternion), and translation.
 
-https://docs.unrealengine.com/4.27/en-US/Basics/Actors/Transform/#worldandlocaltransformationmodes
-
-https://docs.unrealengine.com/5.1/en-US/transforming-actors-in-unreal-engine/
-
 To set an Actor's transform, use [SetActorTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorTransform/), or [SetActorRelativeTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorRelativeTransform/) to target the Actor's Root Component.
 
 To apply a delta to the Actor's existing transform, use [AddActorLocalTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorLocalTransform/) to transform according to local space (based on the Actor's orientation), or [AddActorWorldTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorWorldTransform/) to transform according to world space (based on the world's orientation).
