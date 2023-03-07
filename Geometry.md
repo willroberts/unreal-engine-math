@@ -106,36 +106,49 @@ There are also [`FVector4`](https://docs.unrealengine.com/4.27/en-US/API/Runtime
 
 ## Linear Transformation of Vectors
 
-- Linear transformations in Vector spaces
-    - Sometimes called linear maps or mappings
-    - Useful for expanding, compacting, reflecting, rotating, or shifting coordinate systems
-    - Linear transformation: L(V) = b, similar to function transformation f(x) = a
-    - Linear transformations can change dimensions of Vectors, e.g. 2x2 Matrix to Vec<3> or Vec<2> to Scalar
-    - In other words, LTs map one vector space V to another vector space W (L:V->W)
-    - LTs can be represented as a matrix L(V) = A*V, where A is an m*n matrix
-        - As an example, L(V) = [     b ]
-                                [ a + b ]
-                                [ a - b ]
-            - Standard basis Vector2:
-                [ 1 ] [ 0 ] (top row is value a)
-                [ 0 ] [ 1 ] (bottom row is value b)
-            - Transformed by L(V):
-                [ 0 ] [  1 ]
-                [ 1 ] [  1 ]
-                [ 1 ] [ -1 ]
-            - Matrix A (from L(V)):
-                [ 0  1 ]
-                [ 1  1 ]
-                [ 1 -1 ]
-            - Putting it all together: L(V) = A*V
-            Multiply rows of first matrix by columns of second matrix, then add the products
-                - A*V = [ 0*a +  1*b ] = Same representation as L(V)
-                        [ 1*a +  1*b ]
-                        [ 1*a + -1*b ]
+Linear transformations in Vector spaces, sometimes called linear maps since they map one Vector space to another Vector space, are useful for expanding, compacting, reflecting, rotating, or shifting coordinate systems.
+
+Like function transformations, e.g. `f(x) = y`, linear transformations can operate on Vectors, e.g. `L(V) = W`. Linear transformations can change the dimensions of Vectors, such as turning a 2x2 Matrix into a 3-component Vector, or turning a 2-component Vector into a Scalar.
+
+Linear transformations can be represented as `L(V) = A*V`, where `A` is an `m*n` Matrix. As an example, we can transform 2-component Vectors into 3-component Vectors, where `a` and `b` are the input Vector's components:
+
+```text
+L(V) = [     b ]
+       [ a + b ]
+       [ a - b ]
+
+V1 = < 1 0 >
+L(V1) = [ 0 ]
+        [ 1 ]
+        [ 1 ]
+
+V2 = < 0 1 >
+L(V2) = [  1 ]
+        [  1 ]
+        [ -1 ]
+```
 
 ## Linear Transformation in Unreal Engine
 
+[`FTransform`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FTransform/): A transform composed of scale, rotation (as a quaternion), and translation.
+
+https://docs.unrealengine.com/4.27/en-US/Basics/Actors/Transform/#worldandlocaltransformationmodes
+
+https://docs.unrealengine.com/5.1/en-US/transforming-actors-in-unreal-engine/
+
+To set an Actor's transform, use [SetActorTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorTransform/), or [SetActorRelativeTransform](https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/SetActorRelativeTransform/) to target the Actor's Root Component.
+
+To apply a delta to the Actor's existing transform, use []() to transform according to local space (based on the Actor's orientation), or []() to transform according to world space (based on the world's orientation).
+
+
+https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorLocalTransform/
+https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/GameFramework/AActor/AddActorWorldTransform/
+
+Sweep (Collision) and Teleport (Physics)
+
 Blueprint: Transform Vector node
+
+For additional info, see [Transforming Actors in Unreal Engine](https://docs.unrealengine.com/5.1/en-US/transforming-actors-in-unreal-engine/).
 
 ## Linear Interpolation
 
