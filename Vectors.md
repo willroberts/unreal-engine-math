@@ -146,8 +146,23 @@ For additional info, see [Transforming Actors in Unreal Engine](https://docs.unr
 
 ## Linear Interpolation
 
-- Lerp
+Linear Interpolation, also called Lerp, is the process of using linear polynomials to generate new data points within an existing range of data points. Given two discrete points, the straight line between them is called the Linear Interpolant. We can use this line to construct new data points by providing new values for the polynomial terms.
+
+For example, if a dataset contains points `(1, 1)` and `(3, 3)`, the straight line between those two points can be expressed as `y=x`. By constructing a new data point with `x=2`, the formula yields `y=2`, giving the new interpolated point `(2, 2)`.
+
+Linear interpolation has a variety of uses in game development, from smooth movement of actors in 3D graphics to client-side prediction for multiplayer networking.
 
 ## Linear Interpolation in Unreal Engine
 
-- RinterpTo
+Unreal Engine's linear interpolation functions can be found in the [`FMath`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/) library.
+
+There are a number of functions available based on the classes you are working with:  
+  
+- For `float` values, you can use [`FInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/FInterpTo/) or [`FInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/FInterpConstantTo/) (constant step).
+- For [`FRotator`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FRotator/) values, you can use [`RInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/RInterpTo/) or [`RInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/RInterpConstantTo/) (constant step).
+- For [`FVector`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector/) values, you can use [`VInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/VInterpTo/) or [`VInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/VInterpConstantTo/) (constant step).
+- For [`FVector2D`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FVector2D/) values, you can use [`Vector2DInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/Vector2DInterpTo/) or [`Vector2DInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/Vector2DInterpConstantTo/) (constant step).
+- For [`FQuat`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FQuat/) values, you can use [`QInterpTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/QInterpTo/) or [`QInterpConstantTo`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/QInterpConstantTo/) (constant step).
+- You can also use the template function [`InterpStep`](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Core/Math/FMath/InterpStep/) with type `T` to interpolate values while specifying the number of steps to use in the step function.
+
+As usual, there are also Blueprint nodes for all of the above.
