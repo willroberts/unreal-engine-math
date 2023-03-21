@@ -40,6 +40,6 @@ These formulas can also be used to solve for acceleration, time, etc. by isolati
 
 In Unreal Engine, Kinematics are used for Actor motion, and are useful in game logic when dealing with velocity, acceleration, or displacement.
 
-Kinematics come into play with characters when working with systems like [Inverse Kinematics](https://docs.unrealengine.com/4.27/en-US/AnimatingObjects/SkeletalMeshAnimation/IKSetups/) (for rigging) or ragdoll physics.
+You will also see the term "Kinematics" come into play with characters when working with systems like [Inverse Kinematics](https://docs.unrealengine.com/4.27/en-US/AnimatingObjects/SkeletalMeshAnimation/IKSetups/) for rigging. However, this is referring not to Kinematic equations, but to the new UE5 rig systems which allow the engine to intelligently transform a skeleton when a World object is displacing bones in a pose (such as when a skeleton is standing with one leg on an elevated object).
 
 Unreal Engine also uses the term "Kinematic" when setting the "Physics Type" on bones in a Skeleton. This functionality disables Physics simulation on the affected bones, while allowing attached bones to continue simulating Physics. For more info, see [Using Kinematic Bodies with Simulated Parents](https://docs.unrealengine.com/4.27/en-US/InteractiveExperiences/Physics/PhysicsAssetEditor/HowTo/KinematicWithSimulatedParents/).
